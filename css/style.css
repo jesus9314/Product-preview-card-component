@@ -1,0 +1,103 @@
+:root{
+    --montserrat: 'Montserrat', sans-serif;
+    --Fraunces: 'Fraunces', serif;
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--montserrat);
+    background-color: var(--cream);
+}
+.card{
+    background-color: var(--white);
+    max-width: 320px;
+    height: 90vh;
+    margin: 5rem auto;
+    border-radius: 10px;
+}
+.card > img{
+    content: url("../images/image-product-mobile.jpg");
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    max-width: 900px;
+}
+.content{
+    padding: 2rem;
+}
+.content > button{
+    background-color: var(--darkCyan);
+    margin: 10px auto;
+    border:none;
+    padding: 15px ;
+    border-radius: 10px;
+    color: var(--white);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+.content > button:hover{
+    background-color: var(--veryDarkBlue);
+}
+.text > h2{
+    font-weight: 500;
+    letter-spacing: 5px;
+    padding: 3px 0;
+    font-size: 14px;
+    color: var(--darkGrayishBlue);
+}
+.text > h1{
+    font-family: var(--Fraunces);
+    font-weight: 700;
+    padding: 10px 0;
+    font-size: 28px;
+}
+.text > p{
+    color: var(--darkGrayishBlue);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2;
+    margin: 5px 0;
+}
+.price{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+.price > p {
+    color: var(--darkCyan);
+    font-family: var(--Fraunces);
+    font-size: 30px;
+}
+.price > span {
+    color: var(--darkGrayishBlue);
+    font-size: small;
+    margin: 0 1rem;
+    text-decoration: line-through;
+}
+@media (min-width:1440px){
+    .card{
+        width: 40%;
+        max-width: 860px;
+        display: flex;
+    }
+    .card > img {
+        width: 50%;
+        content: url("../images/image-product-desktop.jpg");
+        border-radius: 10px 0 0 10px;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
