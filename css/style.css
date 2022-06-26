@@ -19,6 +19,7 @@ body{
 .card{
     background-color: var(--white);
     max-width: 320px;
+    max-height: 650px;
     height: 90vh;
     margin: 5rem auto;
     border-radius: 10px;
@@ -87,7 +88,8 @@ body{
 @media (min-width:1440px){
     .card{
         width: 40%;
-        max-width: 860px;
+        max-width: 600px;
+        max-height: 500px;
         display: flex;
     }
     .card > img {
